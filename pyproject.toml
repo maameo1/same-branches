@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "same-branches"
+version = "0.1.0"
+description = "Bifurcation Connectedness Score (BCS) for coronary artery segmentation"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Maame Owusu-Ansah" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "scikit-image>=0.25",
+]
+
+[project.optional-dependencies]
+nifti = ["nibabel"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["bcs"]
